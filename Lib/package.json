@@ -1,7 +1,6 @@
 {
   "name": "develop",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -10,5 +9,12 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.7.0"
-  }
+  },
+  "dependencies": {
+    "import-local": "^3.1.0",
+    "inquirer": "^9.2.15",
+    "svg": "^0.1.0"
+  },
+  "keywords": [],
+  "description": ""
 }
