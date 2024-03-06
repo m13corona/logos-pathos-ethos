@@ -1,10 +1,9 @@
-const fs = require ('fs');
-const inquirer = require('inquirer');
+//const fs = require ('fs');
+const inquirer = import('inquirer');
 
-const { generateLogo } = require ('./Lib')
+//const { generateLogo } = require ('./Lib')
 
-function userQuestions() {
-    return inquirer.prompt([
+const questions = [
 
 {
     type: 'input',
@@ -24,15 +23,23 @@ function userQuestions() {
     type: 'list',
     name: 'shape',
     message: 'Please choose between: circle, triangle, and square',
-    choices: ['cicle', 'triangle', 'square']
+    choices: ['circle', 'triangle', 'square']
 
+},
 
-
+{
+    type: 'input',
+    name: 'shapeColor',
+    message: 'Please enter shape color'
 }
 
+];
 
 
-    ])
-
-
-}
+inquirer.prompt(questions)
+  .then(answers => {
+    console.log('answers', answers);
+   })
+ .catch(error => {
+     console.log('error', error);
+    })
