@@ -1,5 +1,5 @@
-//const fs = require ('fs');
-const inquirer = import('inquirer');
+const fs = require ('fs');
+const inquirer = require('inquirer');
 
 //const { generateLogo } = require ('./Lib')
 
@@ -43,3 +43,14 @@ inquirer.prompt(questions)
  .catch(error => {
      console.log('error', error);
     })
+
+    async function generateLogo() {
+        const { text, textColor, shape, shapeColor } = await promptUser();
+        createLogo(text, textColor, shape, shapeColor);
+        console.log('Generated logo.svg');
+      }
+
+
+function init () {}
+
+init();
